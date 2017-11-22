@@ -1,0 +1,41 @@
+@mixin cross_x($size, $thick, $color:null) {
+    position:relative;
+	width:$size;
+	height:$size;
+    &:before,
+    &:after {
+        content:'';
+        position:absolute;
+        top:50%;
+        left:50%;
+        background:$color;
+        -webkit-transform:rotate(45deg);
+		-moz-transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+        transform:rotate(45deg);
+    }
+    &:before {
+        width:$size;
+        height:$thick;
+        margin:-#{round($thick / 2)} 0 0 -#{round($size / 2)};
+    }
+    &:after {
+        width:$thick;
+        height:$size;
+        margin:-#{round($size / 2)} 0 0 -#{round($thick / 2)};
+    }
+}
+
+
+// sqrt func
+// 출처 - https://gist.github.com/LoicGoyet/1fbe5b3e31704473e257
+@function sqrt($r) {
+    $x0: 1;
+    $x1: $x0;
+
+    @for $i from 1 through 10 {
+        $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+        $x0: $x1;
+    }
+    @return $x1;
+}
