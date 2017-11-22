@@ -24,3 +24,19 @@ for(var i=0; i<$layerClose.length; i++){
 		this.closest('.layer-flow').classList.remove('on');
 	})
 }
+
+
+// 폴리필
+if (window.Element && !Element.prototype.closest) {
+    Element.prototype.closest =
+    function(s) {
+        var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+            i,
+            el = this;
+        do {
+            i = matches.length;
+            while (--i >= 0 && matches.item(i) !== el) {};
+        } while ((i < 0) && (el = el.parentElement));
+        return el;
+    };
+}
