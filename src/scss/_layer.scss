@@ -1,0 +1,57 @@
+.layer-scroll-block {
+	overflow:hidden;
+}
+.layer {
+	display:none;
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:100;
+	&.on {
+		display:block;
+	}
+	.layer-dim {
+		position:fixed;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		background:rgba(0,0,0,.5);
+	}
+	.layer-window {
+		position:relative;
+		top:50%;
+		left:50%;
+		width:640px;
+		min-height:300px;
+		background:#fff;
+		transform:translate(-50%, -50%);
+	}
+}
+.layer-flow {
+	display:none;
+	position:absolute;
+	&.on {
+		display:block;
+	}
+	.layer-window {
+		width:640px;
+		min-height:300px;
+		background:#fff;
+	}
+}
+.thumb-layer {
+	.layer-window {
+		border:1px solid #999;
+	}
+	.layer-hd {
+		position:relative;
+	}
+	.layer-close {
+		@include cross_x(24px, 1px, #666);
+		position:absolute;
+		right:0;
+	}
+}
