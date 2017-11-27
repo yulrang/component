@@ -27,10 +27,10 @@
 		&:hover {
 			.carousel-img {
 				transform:scale(1.2);
-				transform-origin:center left;
+				transform-origin:left center;
 				&:after {
 					transform:translateY(0);
-					transform-origin:bottom center;
+					transform-origin:center bottom;
 				}
 			}
 			& ~ .carousel-list-item {

@@ -256,15 +256,15 @@ body {
 .carousel .carousel-list-item:hover .carousel-img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transform-origin: center left;
-          transform-origin: center left;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
 }
 
 .carousel .carousel-list-item:hover .carousel-img:after {
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transform-origin: bottom center;
-          transform-origin: bottom center;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
 }
 
 .carousel .carousel-list-item:hover ~ .carousel-list-item {
