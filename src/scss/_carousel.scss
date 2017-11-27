@@ -11,6 +11,7 @@
 		transition:transform .5s ease;
 		.carousel-img {
 			position:relative;
+			transition:transform .25s ease;
 			&:after {
 				content:'';
 				position:absolute;
@@ -21,9 +22,6 @@
 				background:linear-gradient(to top, rgba(0,0,0,.9), transparent);
 				transform:translateY(40px);
 				transition:transform .5s ease;
-			}
-			img {
-				transition:transform .25s ease;
 			}
 		}
 		&:hover {

@@ -230,6 +230,10 @@ body {
 
 .carousel .carousel-list-item .carousel-img {
   position: relative;
+  -webkit-transition: -webkit-transform .25s ease;
+  transition: -webkit-transform .25s ease;
+  transition: transform .25s ease;
+  transition: transform .25s ease, -webkit-transform .25s ease;
 }
 
 .carousel .carousel-list-item .carousel-img:after {
@@ -247,13 +251,6 @@ body {
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
   transition: transform .5s ease, -webkit-transform .5s ease;
-}
-
-.carousel .carousel-list-item .carousel-img img {
-  -webkit-transition: -webkit-transform .25s ease;
-  transition: -webkit-transform .25s ease;
-  transition: transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease;
 }
 
 .carousel .carousel-list-item:hover .carousel-img {
