@@ -25,7 +25,6 @@ for(var i=0; i<$layerClose.length; i++){
 	})
 }
 
-
 // 폴리필
 if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector ||

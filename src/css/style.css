@@ -7,7 +7,7 @@
   height: 1px;
 }
 
-.thumb .thumb-list:after {
+.thumb .thumb-list:after, .carousel .carousel-list:after {
   content: '';
   display: block;
   clear: both;
@@ -213,6 +213,66 @@ body {
   width: 1px;
   height: 24px;
   margin: -12px 0 0 -1px;
+}
+
+.carousel .carousel-frame {
+  width: 10000px;
+  overflow: hidden;
+}
+
+.carousel .carousel-list-item {
+  float: left;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.carousel .carousel-list-item .carousel-img {
+  position: relative;
+}
+
+.carousel .carousel-list-item .carousel-img:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.9)), to(transparent));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.carousel .carousel-list-item .carousel-img img {
+  -webkit-transition: -webkit-transform .25s ease;
+  transition: -webkit-transform .25s ease;
+  transition: transform .25s ease;
+  transition: transform .25s ease, -webkit-transform .25s ease;
+}
+
+.carousel .carousel-list-item:hover .carousel-img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+.carousel .carousel-list-item:hover .carousel-img:after {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+
+.carousel .carousel-list-item:hover ~ .carousel-list-item {
+  -webkit-transform: translate(64px);
+          transform: translate(64px);
 }
 
 /*# sourceMappingURL=style.css.map */

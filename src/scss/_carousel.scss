@@ -1,0 +1,43 @@
+.carousel {
+	.carousel-list {
+		@extend %clearfix;
+	}
+	.carousel-frame {
+		width:10000px;
+		overflow:hidden;
+	}
+	.carousel-list-item {
+		float:left;
+		transition:transform .5s ease;
+		.carousel-img {
+			position:relative;
+			&:after {
+				content:'';
+				position:absolute;
+				left:0;
+				right:0;
+				bottom:0;
+				height:100px;
+				background:linear-gradient(to top, rgba(0,0,0,.9), transparent);
+				transform:translateY(40px);
+				transition:transform .5s ease;
+			}
+			img {
+				transition:transform .25s ease;
+			}
+		}
+		&:hover {
+			.carousel-img {
+				transform:scale(1.2);
+				transform-origin:center left;
+				&:after {
+					transform:translateY(0);
+					transform-origin:bottom center;
+				}
+			}
+			& ~ .carousel-list-item {
+				transform:translate(64px)
+			}
+		}
+	}
+}
