@@ -1,3 +1,18 @@
+@mixin elip($line){
+	@if ($line == 1) {
+		display:block;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+	}
+	@else if ($line > 1){
+		display:-webkit-box;
+		text-overflow:ellipsis;
+		overflow:hidden;
+		-webkit-box-orient:vertical;
+		-webkit-line-clamp:$line;
+	}
+}
 @mixin cross_x($size, $thick, $color:null) {
     position:relative;
 	width:$size;
