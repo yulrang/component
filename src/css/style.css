@@ -247,6 +247,8 @@ body {
 .carousel .carousel-list-item:hover ~ .carousel-list-item {
   -webkit-transform: translate(64px);
           transform: translate(64px);
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
 }
 
 .carousel .carousel-list-item .carousel-img {

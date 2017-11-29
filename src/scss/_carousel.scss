@@ -21,7 +21,8 @@
 				transform:translateY(0);
 			}
 			& ~ .carousel-list-item {
-				transform:translate(64px)
+				transform:translate(64px);
+				transition-delay:.3s;
 			}
 		}
 		.carousel-img {
