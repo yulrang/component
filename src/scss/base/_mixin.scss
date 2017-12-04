@@ -40,7 +40,56 @@
         margin:-#{round($size / 2)} 0 0 -#{round($thick / 2)};
     }
 }
+@mixin regularTriangle($width, $dir, $color){
+    width:0;
+    @if ($dir == top or $dir == bottom) {
+        border-left:round($width/2) solid transparent;
+        border-right:round($width/2) solid transparent;
+    }
+    @elseif ($dir == left or $dir == right) {
+        border-top:($width/2) solid transparent;
+        border-bottom:($width/2) solid transparent;
+    }
 
+    @if     ($dir == top)       { border-bottom:$width*sqrt(3)/2 solid $color;}
+    @elseif ($dir == bottom)    { border-top:$width*sqrt(3)/2 solid $color;}
+    @elseif ($dir == left)      { border-right:$width*sqrt(3)/2 solid $color;}
+    @elseif ($dir == right)     { border-left:$width*sqrt(3)/2 solid $color;}
+}
+@mixin bubble($arrow_width, $pos, $dir, $back-color, $border-color:null) {
+    &:before, &:after {
+        content:'';
+        position:absolute;
+    }
+    @if ($border-color != null){    // if border exist
+        &:before {
+            $arrow_pos : ($arrow_width + 2)*sqrt(3)/2;
+
+            @if     ( $dir == left or $dir == right ) { top:$pos; margin-top:-($arrow_width / 2 + 1); }
+            @elseif ( $dir == top or $dir == bottom ) { left:$pos; margin-left:-($arrow_width / 2 + 1); }
+
+            @if     ($dir == top)       { top:-$arrow_pos;}
+            @elseif ($dir == bottom)    { bottom:-$arrow_pos; }
+            @elseif ($dir == left)      { left:-$arrow_pos; }
+            @elseif ($dir == right)     { right:-$arrow_pos; }
+
+            @include regularTriangle($arrow_width + 2,$dir,$border-color);
+        }
+    }
+    &:after {
+        $arrow_pos : $arrow_width * sqrt(3) / 2;
+
+        @if     ( $dir == left or $dir == right ) { top:$pos; margin-top:-($arrow_width / 2); }
+        @elseif ( $dir == top or $dir == bottom ) { left:$pos; margin-left:-($arrow_width / 2); }
+
+        @if     ($dir == top)       { top:-$arrow_pos + sqrt(3) / 2;}
+        @elseif ($dir == bottom)    { bottom:-$arrow_pos + sqrt(3) / 2; }
+        @elseif ($dir == left)      { left:-$arrow_pos + sqrt(3) / 2; }
+        @elseif ($dir == right)     { right:-$arrow_pos + sqrt(3) / 2; }
+
+        @include regularTriangle($arrow_width,$dir,$back-color);
+    }
+}
 
 // sqrt func
 // 출처 - https://gist.github.com/LoicGoyet/1fbe5b3e31704473e257
