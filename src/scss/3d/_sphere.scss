@@ -1,0 +1,35 @@
+.sphere {
+	transform-style:preserve-3d;
+	transform-origin:150px 150px;
+	animation:ani ease 10s infinite;
+}
+.line-x,
+.line-y {
+	position:absolute;
+	width:300px;
+	height:300px;
+	border-radius:50%;
+	border:1px solid rgba(255,255,255,.2);
+}
+.line-x {
+	@for $i from 1 through 36 {
+		&:nth-child(#{$i}) {
+			background:rgba(255, 255/36*$i, 0, .05);
+			transform:rotateX(0deg + $i * 10);
+		}
+	}
+}
+.line-y {
+	@for $i from 1 through 36 {
+		&:nth-child(#{$i}) {
+			background:rgba(255, 255/36*$i, 0, .05);
+			transform:rotateY(0deg + $i * 10);
+		}
+	}
+}
+
+@keyframes ani {
+	to {
+		transform:rotateY(360deg);
+	}
+}

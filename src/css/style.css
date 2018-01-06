@@ -89,8 +89,7 @@ body {
 }
 
 .thumb .thumb-link:hover .thumb-img img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .thumb .thumb-img {
@@ -110,10 +109,7 @@ body {
 
 .thumb .thumb-img img {
   width: 100%;
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
 .thumb .thumb-tit {
@@ -158,8 +154,7 @@ body {
   width: 640px;
   min-height: 300px;
   background: #fff;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .layer-flow {
@@ -200,6 +195,8 @@ body {
   left: 50%;
   background: #666;
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -223,41 +220,29 @@ body {
 .carousel .carousel-list-item {
   float: left;
   position: relative;
-  -webkit-transition: -webkit-transform .25s ease;
-  transition: -webkit-transform .25s ease;
   transition: transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease;
 }
 
 .carousel .carousel-list-item:hover .carousel-img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .carousel .carousel-list-item:hover .carousel-img:after {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 
 .carousel .carousel-list-item:hover .carousel-txt {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 
 .carousel .carousel-list-item:hover ~ .carousel-list-item {
-  -webkit-transform: translate(64px);
-          transform: translate(64px);
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
+  transform: translate(64px);
+  transition-delay: .3s;
 }
 
 .carousel .carousel-list-item .carousel-img {
-  -webkit-transform-origin: left center;
-          transform-origin: left center;
-  -webkit-transition: -webkit-transform .6s ease;
-  transition: -webkit-transform .6s ease;
+  transform-origin: left center;
   transition: transform .6s ease;
-  transition: transform .6s ease, -webkit-transform .6s ease;
 }
 
 .carousel .carousel-list-item .carousel-img:after {
@@ -267,16 +252,10 @@ body {
   right: 0;
   bottom: 0;
   height: 100px;
-  background: -webkit-gradient(linear, left bottom, left top, from(black), to(transparent));
   background: linear-gradient(to top, black, transparent);
-  -webkit-transform: translateY(70px);
-          transform: translateY(70px);
-  -webkit-transform-origin: center bottom;
-          transform-origin: center bottom;
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
+  transform: translateY(70px);
+  transform-origin: center bottom;
   transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
 .carousel .carousel-list-item .carousel-txt {
@@ -287,14 +266,9 @@ body {
   width: 324px;
   padding: 0 30px 18px;
   color: #fff;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-  -webkit-transform-origin: center bottom;
-          transform-origin: center bottom;
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
+  transform: translateY(100%);
+  transform-origin: center bottom;
   transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
 .carousel .carousel-list-item .carousel-txt .tit {
