@@ -1,4 +1,4 @@
-.wrap {
+.cube-wrap {
   position: absolute;
   width: 300px;
   height: 300px;
@@ -87,13 +87,33 @@
   }
 }
 
+.sphere-wrap {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+  -webkit-perspective-origin: top;
+          perspective-origin: top;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .sphere {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: ani ease 10s infinite;
+          animation: ani ease 10s infinite;
+}
+
+.x-axis,
+.y-axis {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transform-origin: 150px 150px;
           transform-origin: 150px 150px;
-  -webkit-animation: ani ease 10s infinite;
-          animation: ani ease 10s infinite;
 }
 
 .line-x,
@@ -108,433 +128,433 @@
 .line-x:nth-child(1) {
   background: rgba(255, 7, 0, 0.05);
   -webkit-transform: rotateX(10deg);
-          transform: rotateX(10deg);
+  transform: rotateX(10deg);
 }
 
 .line-x:nth-child(2) {
   background: rgba(255, 14, 0, 0.05);
   -webkit-transform: rotateX(20deg);
-          transform: rotateX(20deg);
+  transform: rotateX(20deg);
 }
 
 .line-x:nth-child(3) {
   background: rgba(255, 21, 0, 0.05);
   -webkit-transform: rotateX(30deg);
-          transform: rotateX(30deg);
+  transform: rotateX(30deg);
 }
 
 .line-x:nth-child(4) {
   background: rgba(255, 28, 0, 0.05);
   -webkit-transform: rotateX(40deg);
-          transform: rotateX(40deg);
+  transform: rotateX(40deg);
 }
 
 .line-x:nth-child(5) {
   background: rgba(255, 35, 0, 0.05);
   -webkit-transform: rotateX(50deg);
-          transform: rotateX(50deg);
+  transform: rotateX(50deg);
 }
 
 .line-x:nth-child(6) {
   background: rgba(255, 43, 0, 0.05);
   -webkit-transform: rotateX(60deg);
-          transform: rotateX(60deg);
+  transform: rotateX(60deg);
 }
 
 .line-x:nth-child(7) {
   background: rgba(255, 50, 0, 0.05);
   -webkit-transform: rotateX(70deg);
-          transform: rotateX(70deg);
+  transform: rotateX(70deg);
 }
 
 .line-x:nth-child(8) {
   background: rgba(255, 57, 0, 0.05);
   -webkit-transform: rotateX(80deg);
-          transform: rotateX(80deg);
+  transform: rotateX(80deg);
 }
 
 .line-x:nth-child(9) {
   background: rgba(255, 64, 0, 0.05);
   -webkit-transform: rotateX(90deg);
-          transform: rotateX(90deg);
+  transform: rotateX(90deg);
 }
 
 .line-x:nth-child(10) {
   background: rgba(255, 71, 0, 0.05);
   -webkit-transform: rotateX(100deg);
-          transform: rotateX(100deg);
+  transform: rotateX(100deg);
 }
 
 .line-x:nth-child(11) {
   background: rgba(255, 78, 0, 0.05);
   -webkit-transform: rotateX(110deg);
-          transform: rotateX(110deg);
+  transform: rotateX(110deg);
 }
 
 .line-x:nth-child(12) {
   background: rgba(255, 85, 0, 0.05);
   -webkit-transform: rotateX(120deg);
-          transform: rotateX(120deg);
+  transform: rotateX(120deg);
 }
 
 .line-x:nth-child(13) {
   background: rgba(255, 92, 0, 0.05);
   -webkit-transform: rotateX(130deg);
-          transform: rotateX(130deg);
+  transform: rotateX(130deg);
 }
 
 .line-x:nth-child(14) {
   background: rgba(255, 99, 0, 0.05);
   -webkit-transform: rotateX(140deg);
-          transform: rotateX(140deg);
+  transform: rotateX(140deg);
 }
 
 .line-x:nth-child(15) {
   background: rgba(255, 106, 0, 0.05);
   -webkit-transform: rotateX(150deg);
-          transform: rotateX(150deg);
+  transform: rotateX(150deg);
 }
 
 .line-x:nth-child(16) {
   background: rgba(255, 113, 0, 0.05);
   -webkit-transform: rotateX(160deg);
-          transform: rotateX(160deg);
+  transform: rotateX(160deg);
 }
 
 .line-x:nth-child(17) {
   background: rgba(255, 120, 0, 0.05);
   -webkit-transform: rotateX(170deg);
-          transform: rotateX(170deg);
+  transform: rotateX(170deg);
 }
 
 .line-x:nth-child(18) {
   background: rgba(255, 128, 0, 0.05);
   -webkit-transform: rotateX(180deg);
-          transform: rotateX(180deg);
+  transform: rotateX(180deg);
 }
 
 .line-x:nth-child(19) {
   background: rgba(255, 135, 0, 0.05);
   -webkit-transform: rotateX(190deg);
-          transform: rotateX(190deg);
+  transform: rotateX(190deg);
 }
 
 .line-x:nth-child(20) {
   background: rgba(255, 142, 0, 0.05);
   -webkit-transform: rotateX(200deg);
-          transform: rotateX(200deg);
+  transform: rotateX(200deg);
 }
 
 .line-x:nth-child(21) {
   background: rgba(255, 149, 0, 0.05);
   -webkit-transform: rotateX(210deg);
-          transform: rotateX(210deg);
+  transform: rotateX(210deg);
 }
 
 .line-x:nth-child(22) {
   background: rgba(255, 156, 0, 0.05);
   -webkit-transform: rotateX(220deg);
-          transform: rotateX(220deg);
+  transform: rotateX(220deg);
 }
 
 .line-x:nth-child(23) {
   background: rgba(255, 163, 0, 0.05);
   -webkit-transform: rotateX(230deg);
-          transform: rotateX(230deg);
+  transform: rotateX(230deg);
 }
 
 .line-x:nth-child(24) {
   background: rgba(255, 170, 0, 0.05);
   -webkit-transform: rotateX(240deg);
-          transform: rotateX(240deg);
+  transform: rotateX(240deg);
 }
 
 .line-x:nth-child(25) {
   background: rgba(255, 177, 0, 0.05);
   -webkit-transform: rotateX(250deg);
-          transform: rotateX(250deg);
+  transform: rotateX(250deg);
 }
 
 .line-x:nth-child(26) {
   background: rgba(255, 184, 0, 0.05);
   -webkit-transform: rotateX(260deg);
-          transform: rotateX(260deg);
+  transform: rotateX(260deg);
 }
 
 .line-x:nth-child(27) {
   background: rgba(255, 191, 0, 0.05);
   -webkit-transform: rotateX(270deg);
-          transform: rotateX(270deg);
+  transform: rotateX(270deg);
 }
 
 .line-x:nth-child(28) {
   background: rgba(255, 198, 0, 0.05);
   -webkit-transform: rotateX(280deg);
-          transform: rotateX(280deg);
+  transform: rotateX(280deg);
 }
 
 .line-x:nth-child(29) {
   background: rgba(255, 205, 0, 0.05);
   -webkit-transform: rotateX(290deg);
-          transform: rotateX(290deg);
+  transform: rotateX(290deg);
 }
 
 .line-x:nth-child(30) {
   background: rgba(255, 213, 0, 0.05);
   -webkit-transform: rotateX(300deg);
-          transform: rotateX(300deg);
+  transform: rotateX(300deg);
 }
 
 .line-x:nth-child(31) {
   background: rgba(255, 220, 0, 0.05);
   -webkit-transform: rotateX(310deg);
-          transform: rotateX(310deg);
+  transform: rotateX(310deg);
 }
 
 .line-x:nth-child(32) {
   background: rgba(255, 227, 0, 0.05);
   -webkit-transform: rotateX(320deg);
-          transform: rotateX(320deg);
+  transform: rotateX(320deg);
 }
 
 .line-x:nth-child(33) {
   background: rgba(255, 234, 0, 0.05);
   -webkit-transform: rotateX(330deg);
-          transform: rotateX(330deg);
+  transform: rotateX(330deg);
 }
 
 .line-x:nth-child(34) {
   background: rgba(255, 241, 0, 0.05);
   -webkit-transform: rotateX(340deg);
-          transform: rotateX(340deg);
+  transform: rotateX(340deg);
 }
 
 .line-x:nth-child(35) {
   background: rgba(255, 248, 0, 0.05);
   -webkit-transform: rotateX(350deg);
-          transform: rotateX(350deg);
+  transform: rotateX(350deg);
 }
 
 .line-x:nth-child(36) {
   background: rgba(255, 255, 0, 0.05);
   -webkit-transform: rotateX(360deg);
-          transform: rotateX(360deg);
+  transform: rotateX(360deg);
 }
 
 .line-y:nth-child(1) {
   background: rgba(255, 7, 0, 0.05);
   -webkit-transform: rotateY(10deg);
-          transform: rotateY(10deg);
+  transform: rotateY(10deg);
 }
 
 .line-y:nth-child(2) {
   background: rgba(255, 14, 0, 0.05);
   -webkit-transform: rotateY(20deg);
-          transform: rotateY(20deg);
+  transform: rotateY(20deg);
 }
 
 .line-y:nth-child(3) {
   background: rgba(255, 21, 0, 0.05);
   -webkit-transform: rotateY(30deg);
-          transform: rotateY(30deg);
+  transform: rotateY(30deg);
 }
 
 .line-y:nth-child(4) {
   background: rgba(255, 28, 0, 0.05);
   -webkit-transform: rotateY(40deg);
-          transform: rotateY(40deg);
+  transform: rotateY(40deg);
 }
 
 .line-y:nth-child(5) {
   background: rgba(255, 35, 0, 0.05);
   -webkit-transform: rotateY(50deg);
-          transform: rotateY(50deg);
+  transform: rotateY(50deg);
 }
 
 .line-y:nth-child(6) {
   background: rgba(255, 43, 0, 0.05);
   -webkit-transform: rotateY(60deg);
-          transform: rotateY(60deg);
+  transform: rotateY(60deg);
 }
 
 .line-y:nth-child(7) {
   background: rgba(255, 50, 0, 0.05);
   -webkit-transform: rotateY(70deg);
-          transform: rotateY(70deg);
+  transform: rotateY(70deg);
 }
 
 .line-y:nth-child(8) {
   background: rgba(255, 57, 0, 0.05);
   -webkit-transform: rotateY(80deg);
-          transform: rotateY(80deg);
+  transform: rotateY(80deg);
 }
 
 .line-y:nth-child(9) {
   background: rgba(255, 64, 0, 0.05);
   -webkit-transform: rotateY(90deg);
-          transform: rotateY(90deg);
+  transform: rotateY(90deg);
 }
 
 .line-y:nth-child(10) {
   background: rgba(255, 71, 0, 0.05);
   -webkit-transform: rotateY(100deg);
-          transform: rotateY(100deg);
+  transform: rotateY(100deg);
 }
 
 .line-y:nth-child(11) {
   background: rgba(255, 78, 0, 0.05);
   -webkit-transform: rotateY(110deg);
-          transform: rotateY(110deg);
+  transform: rotateY(110deg);
 }
 
 .line-y:nth-child(12) {
   background: rgba(255, 85, 0, 0.05);
   -webkit-transform: rotateY(120deg);
-          transform: rotateY(120deg);
+  transform: rotateY(120deg);
 }
 
 .line-y:nth-child(13) {
   background: rgba(255, 92, 0, 0.05);
   -webkit-transform: rotateY(130deg);
-          transform: rotateY(130deg);
+  transform: rotateY(130deg);
 }
 
 .line-y:nth-child(14) {
   background: rgba(255, 99, 0, 0.05);
   -webkit-transform: rotateY(140deg);
-          transform: rotateY(140deg);
+  transform: rotateY(140deg);
 }
 
 .line-y:nth-child(15) {
   background: rgba(255, 106, 0, 0.05);
   -webkit-transform: rotateY(150deg);
-          transform: rotateY(150deg);
+  transform: rotateY(150deg);
 }
 
 .line-y:nth-child(16) {
   background: rgba(255, 113, 0, 0.05);
   -webkit-transform: rotateY(160deg);
-          transform: rotateY(160deg);
+  transform: rotateY(160deg);
 }
 
 .line-y:nth-child(17) {
   background: rgba(255, 120, 0, 0.05);
   -webkit-transform: rotateY(170deg);
-          transform: rotateY(170deg);
+  transform: rotateY(170deg);
 }
 
 .line-y:nth-child(18) {
   background: rgba(255, 128, 0, 0.05);
   -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .line-y:nth-child(19) {
   background: rgba(255, 135, 0, 0.05);
   -webkit-transform: rotateY(190deg);
-          transform: rotateY(190deg);
+  transform: rotateY(190deg);
 }
 
 .line-y:nth-child(20) {
   background: rgba(255, 142, 0, 0.05);
   -webkit-transform: rotateY(200deg);
-          transform: rotateY(200deg);
+  transform: rotateY(200deg);
 }
 
 .line-y:nth-child(21) {
   background: rgba(255, 149, 0, 0.05);
   -webkit-transform: rotateY(210deg);
-          transform: rotateY(210deg);
+  transform: rotateY(210deg);
 }
 
 .line-y:nth-child(22) {
   background: rgba(255, 156, 0, 0.05);
   -webkit-transform: rotateY(220deg);
-          transform: rotateY(220deg);
+  transform: rotateY(220deg);
 }
 
 .line-y:nth-child(23) {
   background: rgba(255, 163, 0, 0.05);
   -webkit-transform: rotateY(230deg);
-          transform: rotateY(230deg);
+  transform: rotateY(230deg);
 }
 
 .line-y:nth-child(24) {
   background: rgba(255, 170, 0, 0.05);
   -webkit-transform: rotateY(240deg);
-          transform: rotateY(240deg);
+  transform: rotateY(240deg);
 }
 
 .line-y:nth-child(25) {
   background: rgba(255, 177, 0, 0.05);
   -webkit-transform: rotateY(250deg);
-          transform: rotateY(250deg);
+  transform: rotateY(250deg);
 }
 
 .line-y:nth-child(26) {
   background: rgba(255, 184, 0, 0.05);
   -webkit-transform: rotateY(260deg);
-          transform: rotateY(260deg);
+  transform: rotateY(260deg);
 }
 
 .line-y:nth-child(27) {
   background: rgba(255, 191, 0, 0.05);
   -webkit-transform: rotateY(270deg);
-          transform: rotateY(270deg);
+  transform: rotateY(270deg);
 }
 
 .line-y:nth-child(28) {
   background: rgba(255, 198, 0, 0.05);
   -webkit-transform: rotateY(280deg);
-          transform: rotateY(280deg);
+  transform: rotateY(280deg);
 }
 
 .line-y:nth-child(29) {
   background: rgba(255, 205, 0, 0.05);
   -webkit-transform: rotateY(290deg);
-          transform: rotateY(290deg);
+  transform: rotateY(290deg);
 }
 
 .line-y:nth-child(30) {
   background: rgba(255, 213, 0, 0.05);
   -webkit-transform: rotateY(300deg);
-          transform: rotateY(300deg);
+  transform: rotateY(300deg);
 }
 
 .line-y:nth-child(31) {
   background: rgba(255, 220, 0, 0.05);
   -webkit-transform: rotateY(310deg);
-          transform: rotateY(310deg);
+  transform: rotateY(310deg);
 }
 
 .line-y:nth-child(32) {
   background: rgba(255, 227, 0, 0.05);
   -webkit-transform: rotateY(320deg);
-          transform: rotateY(320deg);
+  transform: rotateY(320deg);
 }
 
 .line-y:nth-child(33) {
   background: rgba(255, 234, 0, 0.05);
   -webkit-transform: rotateY(330deg);
-          transform: rotateY(330deg);
+  transform: rotateY(330deg);
 }
 
 .line-y:nth-child(34) {
   background: rgba(255, 241, 0, 0.05);
   -webkit-transform: rotateY(340deg);
-          transform: rotateY(340deg);
+  transform: rotateY(340deg);
 }
 
 .line-y:nth-child(35) {
   background: rgba(255, 248, 0, 0.05);
   -webkit-transform: rotateY(350deg);
-          transform: rotateY(350deg);
+  transform: rotateY(350deg);
 }
 
 .line-y:nth-child(36) {
   background: rgba(255, 255, 0, 0.05);
   -webkit-transform: rotateY(360deg);
-          transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }
 
 @keyframes ani {
