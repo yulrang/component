@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>pageScroll</title>
+<link rel="stylesheet" href="../../src/css/base/base.css">
+
+<style>
+    #nav{ width:100%; height:40px; background:#333; position:fixed;}
+    .gnb{ width:400px; height:40px; margin:0 auto;}
+    .gnb li a{ width:100px; text-align:center; line-height:40px; color:#fff; float:left; cursor:pointer; }
+    .gnb li a:hover{ background:#111;}
+
+    .page{ height:1000px; text-align:center; line-height:1000px; font-size:30px;}
+    #page1{ background-color:#bbb;}
+    #page2{ background-color:#ccc; height:1500px;}
+    #page3{ background-color:#ddd;}
+    #page4{ background-color:#eee;}
+</style>
+</head>
+<body>
+<nav id="nav">
+    <ul class="gnb">
+        <li><a href="#page1">page1</a></li>
+        <li><a href="#page2">page2</a></li>
+        <li><a href="#page3">page3</a></li>
+        <li><a href="#page4">page4</a></li>
+    </ul>
+</nav>
+
+<div id="page1" class="page">page1</div>
+<div id="page2" class="page">page2</div>
+<div id="page3" class="page">page3</div>
+<div id="page4" class="page">page4</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script src="../../src/js/jquery.mousewheel.min.js"></script>
+<script>
+$(function(){
+    $('.gnb li a').click(function(){
+        var targetId = $(this).attr('href');
+        var n = $(targetId).offset().top;
+        $('html,body').animate({scrollTop:n});
+        return false;
+    })
+
+    $('.page').mousewheel(function(e, delta){
+        var currentTop = $(this).offset().top;
+
+        if(delta > 0){  //delta > 0 : 마우스 휠을 위로 올림
+            prevOffset = $(this).prev().offset().top;
+            $('html,body').stop().animate( {scrollTop: prevOffset} )
+        }
+        else{
+            nextOffset = $(this).next().offset().top;
+			if( $(this).index() != $('.page').length ) {
+	            $('html,body').stop().animate( {scrollTop: nextOffset} )
+			}
+        }
+    })
+})
+</script>
+</body>
+</html>
