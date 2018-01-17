@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Typing animation</title>
+	<link rel="stylesheet" href="../../src/css/ui/ui.css">
+</head>
+<body>
+<p id="txt_typing" aria-hidden="true"><span class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente repudiandae perferendis veniam accusantium maiores assumenda, commodi optio architecto est fugiat exercitationem eligendi molestias dolor magnam ad dolorem? Dolores, nobis voluptatibus.</span><span class="cursor ani"></span></p>
+
+<p class="blind">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente repudiandae perferendis veniam accusantium maiores assumenda, commodi optio architecto est fugiat exercitationem eligendi molestias dolor magnam ad dolorem? Dolores, nobis voluptatibus.</p>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script>
+var $obj = $('#txt_typing');
+setTyping($obj, 80);
+
+function setTyping($obj_wrap, speed) {
+	var $cursor = $obj_wrap.find('.cursor');
+	var $obj = $obj_wrap.find('.txt');
+
+	var txt = $obj.text();
+	var count = 0;
+	var newTxt = "";
+
+	$obj.text("");
+
+	stopCursor();
+	var runTyping = setInterval( runTyping, speed );
+
+	function runTyping(){
+		newTxt += txt.charAt(count);
+
+		$obj.text(newTxt);
+		count++;
+
+		if( count == txt.length ){
+			runCursor();
+			clearInterval( runTyping );
+		}
+	}
+	function stopCursor(){
+		$cursor.removeClass('ani');
+	}
+	function runCursor(){
+		$cursor.addClass('ani');
+	}
+}
+</script>
+</body>
+</html>

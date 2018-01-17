@@ -1,0 +1,25 @@
+#txt_typing {
+	font-size:40px;
+	.cursor {
+		content:'';
+		display:inline-block;
+		vertical-align:middle;
+		width:2px;
+		height:1.1em;
+		margin:0 3px;
+		background:#000;
+
+		&.ani {
+			animation:twinkle 1s infinite;
+		}
+	}
+}
+@keyframes twinkle {
+	from {
+		opacity:1;
+		animation-timing-function:steps(2, start);
+	}
+	to {
+		opacity:0;
+	}
+}

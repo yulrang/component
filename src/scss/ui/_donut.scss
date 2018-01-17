@@ -1,0 +1,36 @@
+:root {
+	--percent : 0;
+	--deg : calc(360deg * var(--percent) / 100);
+}
+
+.donut {
+	$size : 150px;
+	$bg-color : #fff;
+	$donut-color : #000;
+
+	width:$size;
+	height:$size;
+	border-radius: 50%;
+	background-color:$bg-color;
+
+	background-image:
+	linear-gradient(calc(var(--deg) - 90deg), $bg-color 50%, transparent 50%),
+	linear-gradient(-90deg, $donut-color 50%, transparent 50%);
+
+	&.large {
+		background-image:
+		linear-gradient(-90deg, $donut-color 50%, transparent 50%),
+		linear-gradient(calc(var(--deg) + 90deg), $donut-color 50%, transparent 50%);
+	}
+
+	&:after {
+		$hole-size:70px;
+		content:'';
+		position:absolute;
+		width:$hole-size;
+		height:$hole-size;
+		border-radius:50%;
+		background:$bg-color;
+		transform:translate(($size - $hole-size)/2, ($size - $hole-size)/2);
+	}
+}
